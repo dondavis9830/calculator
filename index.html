@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="./script.js"></script>
+    <!-- tailwindcss -->
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- fontfamily -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Baskervville:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Gayathri:wght@100;400;700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Marck+Script&family=Sekuya&display=swap" rel="stylesheet">
+
+    <style>
+        h1{
+            font-family: "Libertinus Serif", serif;
+        }
+    </style>
+
+</head>
+<body class="bg-purple-400">
+        <h1 class="text-center text-4xl underline decoration-solid font-bold mt-10">CALCULATOR</h1>
+    <section class="mt-15">
+        
+        <div id="cal" class="w-100 h-auto mx-auto p-5 py-7 rounded-xl bg-gray-500 shadow-2xl shadow-black " >
+          <div class="flex flex-row justify-between items-center">
+            <h1 class="text-center text-xl font-bold mb-4 text-white">CASIO</h1>
+            <div class="flex flex-row justify-center items-center">
+                <h1 class="text-xl font-bold mb-4 mt-2 me-2 text-white">DS-3B</h1>
+                <div class="flex flex-col justify-center items-center">
+                    <span class="text-center text-xs text-white"><span class="text-xl" style="font-family: 'Sekuya', system-ui;">14</span><br><hr>digits</span>
+                </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-6 gap-4">
+            <input id="input" type="text" placeholder="0" class="bg-gray-200 col-span-6  p-4 rounded-xl text-xl font-bold text-end">
+            <button class=" rounded-xl text-xl font-bold bg-red-600" onclick="clear1()">AC</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-400" onclick="number(7)">7</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-400" onclick="number(8)">8</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-400" onclick="number(9)">9</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-orange-400/80" onclick="modulus('%')">%</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-orange-400/80" onclick="root()">&radic;</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-orange-400/80" onclick="neg('-')">+/-</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-400" onclick="number(4)">4</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-400" onclick="number(5)">5</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-400" onclick="number(6)">6</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-orange-400/80" onclick="number('*')">&times;</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-orange-400/80" onclick="number('-')">-</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-orange-400/80" onclick="back()">&lArr;</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-400" onclick="number(1)">1</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-400" onclick="number(2)">2</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-400" onclick="number(3)">3</button>
+            <button class=" row-span-2 py-4 rounded-xl text-xl font-bold bg-orange-400/80" onclick="number('+')">+</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-orange-400/80" onclick="number('/')">/</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-orange-400/80" onclick="clear1()">C</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-900"  onclick="number(0)">0</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-900"  onclick="zero(0)">00</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-violet-900"  onclick="number('.')">.</button>
+            <button class=" py-4 rounded-xl text-xl font-bold bg-green-600"  onclick="calculate()">=</button>
+          </div>
+        </div>
+    </section>
+</body>
+</html>
